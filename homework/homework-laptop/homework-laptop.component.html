@@ -1,0 +1,8 @@
+<h1 class="text-center text-white">BEST LAPTOP</h1>
+<div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-lg-3" *ngFor="let item of arrLapTop; let i = index">
+            <app-product-item [productItem]="item" (emitFromItem)="getFromItem($event)"></app-product-item>
+        </div>
+</div>
+    
+    

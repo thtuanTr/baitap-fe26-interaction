@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="card bg-light" style="width:300px">
+        <img class="card-img-top" src="assets/img/{{productItem.img}}" alt="Card image" style="max-width:100%; height: 250px;">
+        <div class="card-body text-center">
+            <h4 class="card-title text-center">{{ productItem.name }}</h4>
+            <p class="card-text" *ngIf="isShown">{{ productItem.des }}</p>
+            <button href="#" data-toggle="modal" data-target="#modelId" class="btn btn-primary" (click)="clickDetailBtn()">Detail</button>
+            <button href="#" class="btn btn-danger"  (click)="hideDes()" *ngIf="isShown; else showDes">Hide Des</button>
+        </div>
+    </div>
+</div>
+
+<ng-template #showDes>
+        <button href="#" class="btn btn-success"  (click)="hideDes()">Show Des</button>
+</ng-template>
