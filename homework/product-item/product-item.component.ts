@@ -7,21 +7,20 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ProductItemComponent implements OnInit {
   @Input() productItem;
-  @Output() emitFromItem = new EventEmitter;
+  @Output() emitItem = new EventEmitter();
 
-  isShown = true;
-
-  clickDetailBtn() {
-    this.emitFromItem.emit(this.productItem)
-  }
-
-  hideDes() {
-    this.isShown = !this.isShown;
-  }
+  isHide:boolean = true;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  detailProduct(){
+    this.emitItem.emit(this.productItem);
+  }
+
+  hideDes() {
+    this.isHide = !this.isHide;
+  }
 }

@@ -1,15 +1,13 @@
-
 <app-homework-header></app-homework-header>
 <app-homework-carousel></app-homework-carousel>
-
 <section  class="container-fluid pt-5 pb-5 bg-dark text-dark">
-    <app-homework-smartphone ></app-homework-smartphone>
+    <app-homework-smartphone  (emitList)="getList($event)"></app-homework-smartphone>
 </section> 
 <section class="container-fluid pt-5 pb-5 bg-dark text-dark">
-    <app-homework-laptop ></app-homework-laptop>
+    <app-homework-laptop (emitList)="getList($event)"></app-homework-laptop>
 </section> 
-<app-modal  [productItem]="detail"></app-modal>
 <section id="promotion" class="container-fluid pt-5 pb-5 bg-dark">
     <app-homework-footer></app-homework-footer>
 </section>
- 
+
+<app-modal  [productItem]="productItem"></app-modal>

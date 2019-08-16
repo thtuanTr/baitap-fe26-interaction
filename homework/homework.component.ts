@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homework.component.scss']
 })
 export class HomeworkComponent implements OnInit {
+  productItem: any;
 
+  getList(productItem) {
+    this.productItem = productItem;
+  }
   constructor() { }
 
   ngOnInit() {
